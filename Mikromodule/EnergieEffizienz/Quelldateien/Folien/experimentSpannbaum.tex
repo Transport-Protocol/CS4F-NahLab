@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{graphicx} 
+ \usepackage[ngerman]{babel}
+
+
+
+\title{Energieeffizienz beim Coding\\[2mm]Experimente} 
+\author{Julia Padberg und Martin Becke}
+\date{August 2024}
+
+
+\begin{document}
+\maketitle
+
+
+\section*{Experiment zu Laufzeit und Energieverbrauch: Spannbaum}
+
+Die folgenden Aufgaben umfassen die Implementierung von  Algorithmen aus dem Bereich der Graphentheorie und  Nutzung der Library \texttt{GraphStream}\footnote{%
+   siehe  \href{https://graphstream-project.org/}{https://graphstream-project.org/}}.
+	
+Es soll der Kruskal-Algorithmus aus GraphStream genutzt werden,  so dass  der minimale Spannbaum   und dessen Kantengewichtssumme berechnet werden.
+
+Die Aufgabe umfasst folgende Teile:
+
+			\begin{enumerate}
+			  \item Benutzen Sie den Kruskal-Algorithmus aus Graphstream,
+				\item Entwerfen Sie bitte Junit-Tests und			
+								
+				\item erzeugen Sie dann randomisierte, ungerichtete, gewichtete,  zusammenhängende Multigraphen  
+				für die Messungen,
+		
+				\item in dem Sie  für die Generierung beliebiger, gewichteter Graphen diesen Algorithmus implementieren:
+				
+			\fbox{\parbox{\linewidth}{\ttfamily
+			createWeighted\_MultiGraph(n:int, m:int, min:int, max:int) \\
+			\%\%  $1\le n \le m $ und  $min,max$ Intervall für die Kantengewichte\\[2mm]
+				ungerichteten, zusammenhängenden Multigraphen $G=(V,E)$\\ initialisieren mit: \\
+						 $U=\{v_1, ..., v_n\}$  \hfill  \%\% $n$ ungenutzte Knoten \\	
+						 $V=\{\}$  \hfill  \%\% $n$  Knoten \\	
+						 $E=\{\}$           \hfill  \%\% Kanten   \\[2mm]							
+						select\_randomly $cur \in U$\\
+						$U:= U\setminus\{cur\}$ \\
+						$V:= V \cup\{cur\}$     \hfill  \%\% $cur$ von $U$ nach $V$ schieben\\[2mm]
+						\%\%   je einen  Knoten $nxt \in V, cur \in U$ zufällig	wählen,  \\
+						\%\%  Kante dazwischen,  $cur$ von $U$ nach $V$ schieben \\
+						\%\%  ergibt  einen Spannbaum\\
+			      for $ 1\le i \le n-1\{$  \\ \hspace*{1cm}
+						\parbox{.8\linewidth}{
+								select\_randomly $nxt\in V$\\ 
+								select\_randomly $cur\in U$\\ 								
+						    $U:= U\setminus\{cur\}$ \\
+						    $V:= V \cup\{cur\}$\\
+								select\_randomly $min \le weigth \le max$\\ 
+								$E:=E \cup edge(cur,nxt, weight)$\\
+								$cur:=nxt$\\
+									$\}$
+									}
+								\\[2mm]
+								\%\%  restliche Kanten einfügen\\[2mm]
+								for $ n < i \le m\{$  \\ \hspace*{1cm}
+						\parbox{.8\linewidth}{
+								select\_randomly $cur\in V$\\
+								select\_randomly $nxt\in V$\\
+								select\_randomly $min \le weigth \le max$\\ 
+								$E:=E \cup edge(cur,nxt, weight)$\\
+									$\}$
+									}
+								\\
+						return $G$
+				}}				
+				
+\newpage
+
+       \item Laufzeit- und Energieverbrauchsmessung\\
+			    Für die Messung erzeugen Sie bitte  3  Graphen\\ \hspace*{1cm} 
+					mit 100 Knoten \& 3.000 Kanten, \\  \hspace*{1cm} 
+					mit 1.000 Knoten \& 400.000 Kanten und \\ \hspace*{1cm} 
+					mit 10.000  Knoten \& 2.000.000 Kanten.\\
+					Dann lassen Sie Ihre Algorithmen mehrfach darauf laufen.\\
+					
+					Für jeden der drei Graphen erstellen Sie bitte  eine Tabelle, z.b CVS-Datei, 
+					in der die Kantenanzahl, Ihre Hardware und Ihr Messwerkzeug geschrieben werden, in etwa so:
+					
+					\begin{tabular}{|c|c|}
+						\hline
+						\multicolumn{2}{|l|}{Hardware, IDE, Java-Version, } \\
+						\multicolumn{2}{|l|}{ Tool für die Messung, Knotenanzahl, Kantenanzahl} \\ \hline \hline
+						Laufzeit & Energie \\ \hline
+						 ... &  ...\\ \hline
+					\end{tabular}
+			
+					Danach werden 13 Durchläufe, von denen nur die letzten 10 ausgewertet werden, gestartet und 
+					dann für jeden Durchlauf (ab dem 4.) die Zeit in Millisekunden und der Energieverbrauch in Joule 
+					(oder was auch immer das Messwerkzeug raus gibt)
+					in die  CSV-Datei geschrieben. 
+					
+					
+					\item Statistische Analyse in Excel\\
+					      Wählen Sie die Zelle aus, in der Sie den Korrelationskoeffizienten berechnen möchten.
+								Verwenden Sie diese Formel:  								
+								\begin{center}
+								\texttt{=KORREL(A4:A14, B4:B13)}
+								\end{center}
+								wobei die Spalten durch die Felder 
+								eingeben werden.  Nach Eingabe der Formel drücken Sie Enter. 
+								Die Zelle wird nun den Korrelationskoeffizienten anzeigen.
+Die Werte des Pearson-Korrelationskoeffizienten liegen zwischen -1 und 1. Ein Wert von 1 zeigt eine perfekte positive lineare Beziehung an, -1 eine perfekte negative lineare Beziehung, und 0 bedeutet keine lineare Beziehung.
+					\end{enumerate}
+
+\end{document}

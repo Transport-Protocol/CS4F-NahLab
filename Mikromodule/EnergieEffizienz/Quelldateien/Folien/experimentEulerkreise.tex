@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{graphicx} 
+ \usepackage[ngerman]{babel}
+
+
+\title{Energieeffizienz beim Coding\\[2mm]Experimente} 
+\author{Julia Padberg und Martin Becke}
+\date{August 2024}
+
+
+\begin{document}
+\maketitle
+
+\section*{Experiment zu Laufzeit und Energieverbrauch: Eulerkreise}
+
+
+Die folgenden Aufgaben umfassen die Implementierung von  Algorithmen aus dem Bereich der Graphentheorie und  Nutzung der Library \texttt{GraphStream}\footnote{%
+   siehe  \href{https://graphstream-project.org/}{https://graphstream-project.org/}}.
+	
+	
+	
+   Der Algorithmus von Hierholzer (\href{https://de.wikipedia.org/wiki/Algorithmus_von_Hierholzer}{z.B in Wikipedia})  liefert für  einen ungerichteten, Eulerschen Graphen einen Eulerkreis. 
+	
+	
+	
+		
+Die Aufgabe umfasst folgende Teile:
+			\begin{enumerate}
+				\item Bitte implementieren und testen  Sie die den Hierholzer-Algorithmus zur Eulerkreissuche: 
+				   \begin{enumerate}
+								\item Entwerfen Sie bitte Junit-Tests erst für kleine, gespeicherte Graphen
+								   (sowohl Eulersche Graphen als auch andere). 
+									 Prüfen  Sie, ob die gegebene Kantenfolge ein Eulerkreis ist.							
+								\item Erzeugen Sie dann randomisierte, ungerichtete  Eulergraphen zum Testen und Messen.\\
+												
+			Der folgende Algorithmus erzeugt einen zusammenhängenden Multi-Graphen $G=(V,E)$, der eulersch ist und $n$ Knoten und $m$ Kanten hat. Dabei sind unzusammenhängende Knoten, Schlingen und Multikanten erlaubt.\\[3mm]
+
+			\fbox{\parbox{\linewidth}{\ttfamily
+			createEul\_MultiGraph(n:int, m:int) \hfill  \%\%  $n \ge 1$\\[2mm]
+				ungerichteten Multigraphen $G=(V,E)$ initialisieren mit: \\
+						 $V=\{v_1, ..., v_n\}$  \hfill  \%\% $n$ Knoten \\	
+						 $E=\{\}$           \hfill  \%\% Kanten   
+							
+						select\_randomly $cur \in V$\\
+						
+						\%\%  einen  Knoten $nxt$ zufällig wählen und  Kante zwischen\\
+						\%\%  aktuellem $cur$  und nächstem $nxt$ Knoten einfügen\\[2mm]
+						for $ 2\le i \le m \{$  \\ \hspace*{1cm}
+						\parbox{.7\linewidth}{
+								select\_randomly $nxt\in V$\\ 
+								$E:=E \cup edge(cur,nxt)$\\
+								$cur:=nxt$\\
+									$\}$
+									}
+								\\
+						$E:=E \cup edge(cur,start)$\\
+						return $G$
+				}}				
+							
+\newpage
+
+       \item Laufzeit- und Energieverbrauchsmessung\\
+			    Für die Messung erzeugen Sie bitte  3  Graphen\\ \hspace*{1cm} 
+					mit 100 Knoten \& 3.000 Kanten, \\  \hspace*{1cm} 
+					mit 1.000 Knoten \& 400.000 Kanten und \\ \hspace*{1cm} 
+					mit 10.000  Knoten \& 2.000.000 Kanten.\\
+					Dann lassen Sie Ihre Algorithmen mehrfach darauf laufen.\\
+					
+					Für jeden der drei Graphen erstellen Sie bitte  eine Tabelle, z.b CVS-Datei, 
+					in der die Kantenanzahl, Ihre Hardware und Ihr Messwerkzeug geschrieben werden, in etwa so:
+					
+					\begin{tabular}{|c|c|}
+						\hline
+						\multicolumn{2}{|l|}{Hardware, IDE, Java-Version, } \\
+						\multicolumn{2}{|l|}{ Tool für die Messung, Knotenanzahl, Kantenanzahl} \\ \hline \hline
+						Laufzeit & Energie \\ \hline
+						 ... &  ...\\ \hline
+					\end{tabular}
+			
+					Danach werden 13 Durchläufe, von denen nur die letzten 10 ausgewertet werden, gestartet und 
+					dann für jeden Durchlauf (ab dem 4.) die Zeit in Millisekunden und der Energieverbrauch in Joule 
+					(oder was auch immer das Messwerkzeug raus gibt)
+					in die  CSV-Datei geschrieben. 
+					
+					
+					\item Statistische Analyse in Excel\\
+					      Wählen Sie die Zelle aus, in der Sie den Korrelationskoeffizienten berechnen möchten.
+								Verwenden Sie diese Formel:  								
+								\begin{center}
+								\texttt{=KORREL(A4:A14, B4:B13)}
+								\end{center}
+								wobei die Spalten durch die Felder 
+								eingeben werden.  Nach Eingabe der Formel drücken Sie Enter. 
+								Die Zelle wird nun den Korrelationskoeffizienten anzeigen.
+Die Werte des Pearson-Korrelationskoeffizienten liegen zwischen -1 und 1. Ein Wert von 1 zeigt eine perfekte positive lineare Beziehung an, -1 eine perfekte negative lineare Beziehung, und 0 bedeutet keine lineare Beziehung.
+					\end{enumerate}
+
+	\end{enumerate}
+\end{document}
