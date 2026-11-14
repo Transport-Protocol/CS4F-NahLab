@@ -33,13 +33,12 @@ und digitalen Grundrechten erarbeiten.
 
 ### Materialien
 
-1. Comic: Der Assistent
-2. Das GI-Poster zu den ethischen Leitlinien
-3. Fragensammlung aus Der Assistent (erschienen in Informatik Spektrum, 35(4),
-   2012, S. 315–316, Constanze Kurz und Stefan Ullrich, Gewissensbits – Wie
-   würden Sie urteilen? neu veröffentlicht in Gewissensbisse - Fallbeispiele zu
-   ethischen Problemen der Informatik, 2023, S. 52-55, Constanze Kurz und Stefan
-   Ullrich)
+1. [Comic: Der Assistent](../Illustrationen/Der_Assistent.pdf)
+2. Das [GI-Poster zu den ethischen Leitlinien](https://gi.de/fileadmin/GI/Allgemein/PDF/GI_Ethische_Leitlinien_Poster_A3.pdf)
+3. Fragensammlung aus Der Assistent (erschienen in
+   [Informatik Spektrum, 35(4), 2012, S. 315–316, Constanze Kurz und Stefan Ullrich, Gewissensbits – Wie würden Sie urteilen?](https://doi.org/10.1007/s00287-012-0634-3)
+   neu veröffentlicht in
+   [Gewissensbisse - Fallbeispiele zu ethischen Problemen der Informatik, 2023, S. 52-55, Constanze Kurz und Stefan Ullrich](https://doi.org/10.14361/9783839464632))
 
 ### Beispielfragen aus der Fragensammlung
 
