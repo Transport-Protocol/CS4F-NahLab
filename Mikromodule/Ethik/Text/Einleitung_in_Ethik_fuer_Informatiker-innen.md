@@ -58,7 +58,7 @@ automatisierte Entscheidungen auf. Zudem bleibt unklar, wer letztlich die
 Verantwortung für Fehlentscheidungen oder unfaire Priorisierungen trägt – der
 Nutzer, der Hersteller oder das System selbst.
 
-[Zum Comic](Mikromodule/Ethik/Illustrationen/Der_Assistent.pdf)
+[Zum Comic](../Illustrationen/Der_Assistent.pdf)
 
 ![Der Assistent © 2025 by Madita Schwenke is licensed under CC BY
 4.0](../Illustrationen/Ethik_Illustrationen/Der_Assistent_1_low_res.png)
@@ -77,7 +77,7 @@ ethischen Leitlinien der Gesellschaft für Informatik e. V. (GI) mit ihren zwöl
 Artikeln zu Fachkompetenz, Verantwortung, Datenschutz, Nachhaltigkeit und
 sozialer Gerechtigkeit, die ausführlich dargestellt werden.
 
-[Zur Präsentation](Mikromodule/Ethik/Illustrationen/Folien_Mikromodul_Ethik_CS4F.pdf)
+[Zur Präsentation](../Illustrationen/Folien_Mikromodul_Ethik_CS4F.pdf)
 
 ![Präsentationsfolien liegen auf einem Haufen, von der Präsentation Ethik für
 Informatiker-innen. Ethik für Informatiker-innen © 2025 by Susanne Draheim is
