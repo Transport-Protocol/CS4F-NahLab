@@ -58,7 +58,7 @@ automatisierte Entscheidungen auf. Zudem bleibt unklar, wer letztlich die
 Verantwortung für Fehlentscheidungen oder unfaire Priorisierungen trägt – der
 Nutzer, der Hersteller oder das System selbst.
 
-Zum Comic (Datei liegt unter ```../Illustrationen/Der_Assistent.pdf```)
+[Zum Comic](Diskussion_und_Fragensammlung.md)
 
 ![Der Assistent © 2025 by Madita Schwenke is licensed under CC BY
 4.0](../Illustrationen/Ethik_Illustrationen/Der_Assistent_1_low_res.png)
@@ -77,7 +77,7 @@ ethischen Leitlinien der Gesellschaft für Informatik e. V. (GI) mit ihren zwöl
 Artikeln zu Fachkompetenz, Verantwortung, Datenschutz, Nachhaltigkeit und
 sozialer Gerechtigkeit, die ausführlich dargestellt werden.
 
-Zur Präsentation (Datei liegt unter ```../Illustrationen/Folien_Mikromodul_Ethik_CS4F.pdf```)
+[Zur Präsentation](Diskussion_und_Fragensammlung.md)
 
 ![Präsentationsfolien liegen auf einem Haufen, von der Präsentation Ethik für
 Informatiker-innen. Ethik für Informatiker-innen © 2025 by Susanne Draheim is
@@ -101,7 +101,7 @@ Für Lehrende ist hier zusammengefasst, wie dieses Mikromodul durchgeführt werd
 kann. Auch interessierte können sich gerne diesen Inhalt anschauen, um einen
 tieferen Einblick zu erhalten.
 
-Zur Umsetzung (Datei liegt unter ```../Illustrationen/Folien_Mikromodul_Ethik_CS4F.pdf```)
+[Zur Umsetzung](Umsetzung_des_Moduls_Ethik.md)
 
 > Die Quellen zu den wissenschaftlichen Papieren, sowie die Originalbilder sind
 > im [Github](https://github.com/Transport-Protocol/CS4F-NahLab) zu finden
